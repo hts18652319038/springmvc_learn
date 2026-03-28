@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>图书管理</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="container">
+    <h2>添加图书</h2>
+    <form id="bookForm">
+        <input type="text" id="type" placeholder="图书类别（如：计算机）" required>
+        <input type="text" id="name" placeholder="图书名称" required>
+        <input type="text" id="description" placeholder="描述">
+        <button type="button" id="btnSave">保存</button>
+    </form>
+
+    <hr>
+
+    <h2>图书列表</h2>
+    <button type="button" id="btnGetAll">刷新列表</button>
+    <table border="1" id="bookTable">
+        <thead>
+        <tr>
+            <th>类别</th>
+            <th>名称</th>
+            <th>描述</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!-- 数据将通过 JS 动态加载 -->
+        </tbody>
+    </table>
+</div>
+
+<!-- 按照图片目录结构引入脚本 -->
+<script src="../plugins/jquery.min.js"></script>
+<script src="../js/book.js"></script>
+</body>
+</html>
