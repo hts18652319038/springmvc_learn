@@ -1,0 +1,165 @@
+/* 全局基础设置 */
+body {
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f7fa; /* 浅灰色背景 */
+    font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
+    color: #303133;
+}
+
+/* 主容器 */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* 标题样式 */
+h1 {
+    font-size: 24px;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+/* 顶部查询与按钮区 */
+.search-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+/* 输入框通用样式 */
+input[type="text"] {
+    height: 36px;
+    line-height: 36px;
+    padding: 0 15px;
+    border: 1px solid #dcdfe6;
+    border-radius: 4px;
+    outline: none;
+    color: #606266;
+    transition: border-color 0.2s;
+}
+
+input[type="text"]:focus {
+    border-color: #409eff;
+}
+
+#searchName {
+    width: 250px;
+}
+
+/* 按钮基础样式 */
+button {
+    height: 36px;
+    padding: 0 20px;
+    font-size: 14px;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: 0.1s;
+    outline: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button:active {
+    opacity: 0.8;
+}
+
+/* 按钮颜色区分 */
+#btnSearch {
+    background-color: #67c23a; /* 绿色 */
+    color: #fff;
+}
+
+#btnShowAdd, #btnSave {
+    background-color: #409eff; /* 蓝色 */
+    color: #fff;
+}
+
+#btnCancel {
+    background-color: #909399; /* 灰色 */
+    color: #fff;
+}
+
+/* 新增/修改表单区 */
+.form-container {
+    background-color: #fff;
+    border: 1px solid #ebeef5;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+}
+
+.form-container h3 {
+    margin-top: 0;
+    font-size: 18px;
+    color: #409eff;
+    margin-bottom: 15px;
+}
+
+.form-container input {
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+/* 表格样式 */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #ebeef5;
+}
+
+th {
+    background-color: #fafafa;
+    color: #909399;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+td {
+    color: #606266;
+    font-size: 14px;
+}
+
+/* 隔行变色及悬停效果 */
+tbody tr:hover {
+    background-color: #f5f7fa;
+}
+
+/* 表格内操作按钮 */
+.btn-edit {
+    background-color: #409eff;
+    color: white;
+    padding: 5px 12px;
+    height: 28px;
+    font-size: 12px;
+    margin-right: 5px;
+}
+
+.btn-del {
+    background-color: #f56c6c; /* 红色 */
+    color: white;
+    padding: 5px 12px;
+    height: 28px;
+    font-size: 12px;
+}
+
+/* 暂无数据提示 */
+.no-data {
+    text-align: center;
+    color: #909399;
+    padding: 30px !important;
+}

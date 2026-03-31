@@ -1,0 +1,30 @@
+package com.xzit.controller;
+
+import com.xzit.controller.Code;
+import com.xzit.controller.Result;
+import com.xzit.exception.BusinessException;
+import com.xzit.exception.SystemException;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.RestControllerAdvice;
+
+@RestControllerAdvice
+public class ProjectExceptionAdvice {
+    @ExceptionHandler(SystemException.class)
+    public Result doSystemException(SystemException ex){
+        // 记录日志
+        // 发送消息给运维
+        // 发送邮件给开发人员
+        return new Result(ex.getCode(),null,ex.getMessage());
+    }
+
+    @ExceptionHandler(BusinessException.class)
+    public Result doBusinessException(BusinessException ex){
+        return new Result(ex.getCode(),null,ex.getMessage());
+    }
+
+    @ExceptionHandler(Exception.class)
+    public Result doException(Exception exception) {
+        System.out.println("嘿嘿，异常你哪里跑！");
+        return new Result(Code.SYSTEM_UNKNOW_ERR,null,"系统繁忙，请稍后再试！");
+    }
+}

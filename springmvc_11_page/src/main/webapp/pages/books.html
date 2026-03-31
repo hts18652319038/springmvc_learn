@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图书管理系统</title>
+    <!-- 引入外部样式表 -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>图书管理</h1>
+
+    <!-- 顶部查询与新建操作区 -->
+    <div class="search-container">
+        <input type="text" id="searchName" placeholder="输入图书名称查询...">
+        <button type="button" id="btnSearch">查询</button>
+        <button type="button" id="btnShowAdd">新建</button>
+    </div>
+
+    <!-- 添加/修改表单区（默认隐藏） -->
+    <div id="bookFormSection" class="form-container" style="display: none;">
+        <h3 id="formTitle">新增图书</h3>
+        <form id="bookForm">
+            <!-- 隐藏域存储ID，用于区分新增(空)或修改(有值) -->
+            <input type="hidden" id="bookId">
+            <input type="text" id="type" placeholder="图书类别" required>
+            <input type="text" id="name" placeholder="图书名称" required>
+            <input type="text" id="description" placeholder="描述信息">
+            <div style="margin-top: 10px;">
+                <button type="button" id="btnSave">确认保存</button>
+                <button type="button" id="btnCancel">取消</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- 数据展示表格 -->
+    <table id="bookTable">
+        <thead>
+        <tr>
+            <th width="80px">序号</th>
+            <th width="150px">图书类别</th>
+            <th width="250px">图书名称</th>
+            <th>描述</th>
+            <th width="150px">操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td colspan="5" class="no-data">正在加载数据...</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- 脚本引入 -->
+<script src="../plugins/jquery-3.6.4.min.js"></script>
+<script src="../js/book.js"></script>
+
+</body>
+</html>
